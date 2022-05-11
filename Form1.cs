@@ -12,6 +12,8 @@ namespace Restaurant_ad1101
 {
     public partial class frmLogin : Form
     {
+        Form frm=new Form();
+        
         public frmLogin()
         {
             InitializeComponent();
@@ -19,7 +21,13 @@ namespace Restaurant_ad1101
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            txtPassword.PasswordChar = '*';
+        }
 
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            frm=new frmWelcome();
+            this.frm.ShowDialog();
         }
     }
 }
