@@ -26,8 +26,15 @@ namespace Restaurant_ad1101
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            frm=new frmWelcome();
+            MessageBox.Show("Logged in!!");
+            frm = new frmWelcome();
             this.frm.ShowDialog();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txtPassword.Text = "";
+            txtUserName.Text = "";
         }
     }
 }
